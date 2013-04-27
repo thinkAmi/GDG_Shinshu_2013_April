@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>GDG信州 April デモ</title>
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h1>GDG信州 April Twilio デモ</h1>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <form action="/memorize" method="POST">
+                    <fieldset>
+                        <legend>電話の内容</legend>
+                        <div>
+                            <label for="talk">記憶させる内容</label>
+                            <input type="text" name="talk" id="talk" class = "input-large" placeholder="GDG信州Aprilへようこそ">
+                        </duv>
+
+                        <input type="submit" value="DataStoreに記憶！"  class="btn btn-large" />
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="span4">
+                <form action="/call" method="POST">
+                    <fieldset>
+                        <legend>携帯に電話をかけよう</legend>
+                        <input type="submit" value="携帯に電話します！" class="btn btn-large" />
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="span4">
+                <form action="/sms" method="POST">
+                    <fieldset>
+                        <legend>ショートメッセージを飛ばそう</legend>
+
+                        <div class="alert alert-block">
+                            <p>今のところ、ショートメッセージは飛びません</p>
+                        </div>
+                        <input type="submit" value="ショートメッセージを飛ばします！" class="btn btn-large" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="span4">
+                <form action="/list" method="POST">
+                    <fieldset>
+                        <legend>録音一覧</legend>
+                        <input type="submit" value="一覧を表示" class="btn btn-large" />
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="span4">
+                <form action="/delete" method="POST">
+                    <fieldset>
+                        <legend>録音の削除</legend>
+                        <input type="submit" value="録音をひとつ削除" class="btn btn-large" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

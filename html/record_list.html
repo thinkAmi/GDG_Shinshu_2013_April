@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GDG信州 April デモ - 記録一覧</title>
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h1>GDG信州 April Twilio デモ - 記録一覧</h1>
+        </div>
+
+        {% for record in records %}
+            <div class="row">
+                <!-- <div class="span4">記録日：{{ record.date_created|date:"Y/m/d" }}</div> -->
+                <div class="span3">記録日：{{ record.date_created }}</div>
+
+                <div class="span4">
+                    <a href={{ record.uri }} target="_blank">再生</a>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+
+        <a href="./">トップへ戻る</a>
+    </div>
+
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

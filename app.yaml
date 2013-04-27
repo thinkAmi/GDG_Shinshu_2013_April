@@ -1,0 +1,9 @@
+application: gdg-shinshu-april
+version: demoversion
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: index.app
